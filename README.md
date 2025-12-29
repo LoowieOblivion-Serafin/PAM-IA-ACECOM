@@ -1,6 +1,6 @@
 # 🧠 Reconstrucción de Imágenes Mentales desde Actividad Cerebral
 
-Pipeline de deep learning que convierte señales fMRI del cerebro humano en imágenes visuales reconstruidas.
+Pipeline que convierte señales fMRI del cerebro humano en imágenes visuales reconstruidas.
 
 ## Descripción
 
