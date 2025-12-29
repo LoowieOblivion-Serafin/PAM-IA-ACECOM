@@ -175,6 +175,3 @@ Este proyecto es con fines académicos y de investigación. Los modelos pre-entr
 
 **🚀 Para comenzar, consulta [SETUP.md](SETUP.md) para instrucciones detalladas de instalación.**
 
----
-
-**🚀 Para comenzar, consulta [SETUP.md](SETUP.md) para instrucciones detalladas de instalación.**
