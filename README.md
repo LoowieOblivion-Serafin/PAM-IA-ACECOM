@@ -1,6 +1,6 @@
 # 🧠 Reconstrucción de Imágenes Mentales desde Actividad Cerebral
 
-Pipeline que convierte señales fMRI del cerebro humano en imágenes visuales reconstruidas.
+Proyecto que convierte señales fMRI del cerebro humano en imágenes visuales reconstruidas.
 
 ## Descripción
 
