@@ -156,9 +156,10 @@ Este proyecto utiliza y se basa en los siguientes repositorios:
   - Radford et al. (2021) "Learning Transferable Visual Models From Natural Language Supervision"
   - Espacio latente multimodal
 
-### Dataset
-
+### Dataset  
+**datos/fmri**: (https://drive.google.com/uc?id=1Q7TVsVbASMqnDYfFjFzo2SV6njExu8qq)
 El dataset `features.tar.gz` (NO incluido en GitHub por tamaño) contiene:
+
 - Features cerebrales pre-extraídas de fMRI
 - 3 sujetos (S01, S02, S03)
 - 26 imágenes por sujeto
