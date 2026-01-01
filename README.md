@@ -45,18 +45,34 @@ Este proyecto **reimplementa y mejora** el algoritmo del paper científico:
 ## Quick Start
 
 ```bash
-# 1. Instalar dependencias
-pip install -r requirements.txt
+# 1. Clonar repositorios necesarios
+git clone https://github.com/nkmjm/mental_img_recon.git mental_img_recon-main
+git clone https://github.com/CompVis/taming-transformers.git taming-transformers-master
+git clone https://github.com/openai/CLIP.git CLIP-main
 
-# 2. Ejecutar pipeline (Windows: configurar UTF-8 primero)
-$env:PYTHONUTF8=1  # Solo Windows PowerShell
+# 2. Instalar dependencias (Python 3.12)
+py -3.12 -m pip install -r requirements_py312.txt
+
+# 3. Configurar PROJECT_ROOT en config.py (línea 22)
+# Ajustar la ruta a tu ubicación del proyecto
+
+# 4. Verificar instalación
+py -3.12 check_setup.py
+
+# 5. Ejecutar pipeline
 py -3.12 main_local_decoder.py
 
-# 3. Ver resultados
+# 6. Ver resultados
 explorer output_reconstructions  # Windows
 # open output_reconstructions    # Mac
 # xdg-open output_reconstructions # Linux
 ```
+
+> **✅ VENTAJA**: Los fixes de compatibilidad se aplican **AUTOMÁTICAMENTE** al ejecutar:
+> - `patch_taming.py` - Arregla `torch._six` en taming-transformers SIN modificar el repo
+> - `pytorch_lightning_compat.py` - Arregla PyTorch Lightning 2.x
+> 
+> **No necesitas editar manualmente ningún archivo de repositorios externos**
 
 Para instrucciones detalladas de instalación y configuración, consulta **[SETUP.md](SETUP.md)**.
 
