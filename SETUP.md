@@ -28,6 +28,34 @@ Esta guía detalla todos los pasos necesarios para replicar el pipeline de recon
 
 ## Instalación Paso a Paso
 
+### 🚀 Método 1: Instalación Automática (Windows - Recomendado)
+
+Si estás en Windows, puedes usar el script de instalación automática que configura todo por ti:
+
+```powershell
+# 1. Descargar/clonar este repositorio
+git clone https://github.com/TU_USUARIO/ACECOM-Project.git
+cd ACECOM-Project
+
+# 2. Ejecutar instalador
+.\install.ps1
+```
+
+**El script automáticamente**:
+- ✅ Verifica Python 3.12
+- ✅ Clona los 3 repositorios externos (mental_img_recon, taming-transformers, CLIP)
+- ✅ Verifica archivos de compatibilidad (patch_taming.py, pytorch_lightning_compat.py)
+- ✅ Instala todas las dependencias de Python
+- ✅ Ejecuta verificación del setup con `check_setup.py`
+
+**Después del script, solo necesitas**:
+1. Extraer dataset `features.tar.gz`
+2. Ejecutar `py -3.12 main_local_decoder.py`
+
+---
+
+### 📝 Método 2: Instalación Manual (Todos los SO)
+
 ### 1. Estructura de Directorios
 
 Crea y organiza el proyecto en la siguiente estructura:
