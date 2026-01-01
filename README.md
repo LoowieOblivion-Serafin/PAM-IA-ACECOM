@@ -44,6 +44,25 @@ Este proyecto **reimplementa y mejora** el algoritmo del paper científico:
 
 ## Quick Start
 
+### Opción A: Instalación Automática (Windows - Recomendado) 🚀
+
+```powershell
+# 1. Descargar/clonar este repositorio
+git clone https://github.com/TU_USUARIO/ACECOM-Project.git
+cd ACECOM-Project
+
+# 2. Ejecutar instalador automático
+.\install.ps1
+
+# 3. El script automáticamente:
+#    - Clona los 3 repositorios necesarios
+#    - Verifica archivos de compatibilidad
+#    - Instala dependencias
+#    - Ejecuta verificación del setup
+```
+
+### Opción B: Instalación Manual (Todos los SO)
+
 ```bash
 # 1. Clonar repositorios necesarios
 git clone https://github.com/nkmjm/mental_img_recon.git mental_img_recon-main
@@ -71,7 +90,7 @@ explorer output_reconstructions  # Windows
 > **✅ VENTAJA**: Los fixes de compatibilidad se aplican **AUTOMÁTICAMENTE** al ejecutar:
 > - `patch_taming.py` - Arregla `torch._six` en taming-transformers SIN modificar el repo
 > - `pytorch_lightning_compat.py` - Arregla PyTorch Lightning 2.x
-> 
+>
 > **No necesitas editar manualmente ningún archivo de repositorios externos**
 
 Para instrucciones detalladas de instalación y configuración, consulta **[SETUP.md](SETUP.md)**.
