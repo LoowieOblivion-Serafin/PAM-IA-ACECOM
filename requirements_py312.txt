@@ -1,0 +1,66 @@
+# ============================================================================
+# DEPENDENCIAS DEL PROYECTO DE DECODIFICACION DE IMAGENES MENTALES
+# ============================================================================
+# Basado en Koide-Majima et al. (2024)
+# "Mental image reconstruction from human brain activity"
+#
+# Instalacion para Python 3.12:
+#   py -3.12 -m pip install -r requirements_py312.txt
+#
+# Nota: Para GPU, instalar PyTorch con CUDA:
+#   py -3.12 -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# ============================================================================
+
+# ============================================================================
+# CORE: Deep Learning Frameworks
+# ============================================================================
+torch>=1.10.0
+torchvision>=0.11.0
+numpy>=1.21.0
+
+# ============================================================================
+# MODELOS: Arquitecturas especificas
+# ============================================================================
+# CLIP - Alineacion semantica
+ftfy>=6.0.0
+regex>=2021.0.0
+tqdm>=4.62.0
+
+# VQGAN - Generacion de imagenes
+omegaconf>=2.1.0
+taming-transformers-rom1504  # Version compatible
+
+# VGG19 viene incluido en torchvision.models
+
+# ============================================================================
+# PROCESAMIENTO DE DATOS
+# ============================================================================
+Pillow>=8.3.0           # Manejo de imagenes
+scipy>=1.7.0            # Lectura de archivos .mat
+# pickle5 NO ES NECESARIO en Python >= 3.8 (ya viene integrado)
+
+# ============================================================================
+# UTILIDADES
+# ============================================================================
+matplotlib>=3.4.0       # Visualizacion (opcional)
+pandas>=1.3.0           # Analisis de datos (opcional)
+seaborn>=0.11.0         # Visualizacion avanzada (opcional)
+
+# ============================================================================
+# LOGGING Y PROGRESO
+# ============================================================================
+coloredlogs>=15.0       # Logs con colores (opcional)
+rich>=10.0.0            # Output enriquecido (opcional)
+
+# ============================================================================
+# CONFIGURACION RECOMENDADA POR HARDWARE
+# ============================================================================
+# GPU (NVIDIA):
+#   py -3.12 -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+#
+# CPU (sin GPU):
+#   py -3.12 -m pip install torch torchvision
+#
+# Verificar instalacion:
+#   py -3.12 -c "import torch; print(f'PyTorch: {torch.__version__}'); print(f'CUDA: {torch.cuda.is_available()}')"
+# ============================================================================
