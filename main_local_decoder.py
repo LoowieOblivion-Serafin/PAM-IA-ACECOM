@@ -102,6 +102,13 @@ warnings.filterwarnings('ignore')
 # SECCIÓN A: GESTIÓN DE RUTAS (PATH PATCHING)
 # ============================================================================
 # NOTA: Configuración para Windows usando pathlib.Path (compatible multiplataforma)
+
+# Fix automático para taming-transformers (torch._six removido en PyTorch 1.9+)
+import patch_taming
+
+# Fix PyTorch Lightning compatibility issues BEFORE importing any other modules
+import pytorch_lightning_compat
+
 # Importar configuración centralizada
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import config
