@@ -83,12 +83,38 @@ ls features/decoded_features/S01/CLIP_ViT-B_32/lastLayer/
 # Debe mostrar ~26 archivos .pkl con nombres como: imagery__*.pkl
 ```
 
-### 4. Instalar Dependencias
+### 4. Archivos de Compatibilidad (Incluidos en el Proyecto)
 
-#### Opción A: Instalación completa (Recomendada)
+El proyecto incluye **parches automáticos** que se aplican al ejecutar, sin necesidad de modificar repositorios externos:
+
+#### ✅ `patch_taming.py` - Auto-patch para taming-transformers
+
+Este archivo crea un módulo virtual `torch._six` **antes** de importar taming-transformers, evitando el error:
+```
+ModuleNotFoundError: No module named 'torch._six'
+```
+
+**Ventaja**: No necesitas modificar manualmente `taming-transformers-master/taming/data/utils.py`
+
+**Cómo funciona**:
+1. Se ejecuta al inicio de `main_local_decoder.py`
+2. Crea `sys.modules['torch._six']` con `string_classes = str`
+3. taming-transformers lo importa sin errores
+
+#### ✅ `pytorch_lightning_compat.py` - Fix para PyTorch Lightning 2.x
+
+Mapea el import path antiguo `pytorch_lightning.utilities.distributed` al nuevo módulo reorganizado en PyTorch Lightning 2.x.
+
+**Ambos parches se aplican AUTOMÁTICAMENTE** - no requieren intervención manual.
+
+---
+
+### 5. Instalar Dependencias
+
+#### Opción A: Instalación con Python 3.12 (Recomendada)
 
 ```bash
-pip install -r requirements.txt
+py -3.12 -m pip install -r requirements_py312.txt
 ```
 
 #### Opción B: Instalación manual con GPU
