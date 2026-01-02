@@ -34,7 +34,7 @@ Si estás en Windows, puedes usar el script de instalación automática que conf
 
 ```powershell
 # 1. Descargar/clonar este repositorio
-git clone https://github.com/TU_USUARIO/ACECOM-Project.git
+git clone https://github.com/LoowieOblivion-Serafin/PAM-IA-ACECOM.git
 cd ACECOM-Project
 
 # 2. Ejecutar instalador
